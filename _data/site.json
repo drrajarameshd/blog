@@ -4,4 +4,4 @@ module.exports = {
   phone: "+91 80 6218 2411",
   themeColor: "#007bbf",
   year: new Date().getFullYear()
-};
+}
