@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <div class="wrap">
-    <div>© {{ (new Date()).getFullYear() }} {{ site.title }}</div>
+    <div>© {{ "now" | date("yyyy") }} {{ site.title }}</div>
     <div class="contact">
       <a href="mailto:{{ site.email }}">{{ site.email }}</a> |
       <a href="tel:{{ site.phone | replace("+", "%2B") }}">{{ site.phone }}</a>
