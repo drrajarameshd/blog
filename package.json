@@ -1,0 +1,13 @@
+{
+  "name": "asksurgeons-blog",
+  "version": "1.0.0",
+  "description": "AskSurgeons - SEO blog (Eleventy starter)",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
