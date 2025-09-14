@@ -1,9 +1,25 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
   <div class="wrap">
-    <div>© {{ "now" | date("yyyy") }} {{ site.title }}</div>
-    <div class="contact">
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a> |
-      <a href="tel:{{ site.phone | replace("+", "%2B") }}">{{ site.phone }}</a>
+    <div class="site-brand">
+      <span>© {{ "now" | date("yyyy") }} {{ site.title }}</span>
+    </div>
+
+    <div class="contact" aria-label="Contact information">
+      <a href="mailto:{{ site.email }}" aria-label="Email {{ site.title }}">{{ site.email }}</a>
+      <span aria-hidden="true"> | </span>
+      <a href="tel:{{ site.phone | replace('+', '%2B') }}" aria-label="Call {{ site.title }}">{{ site.phone }}</a>
     </div>
   </div>
+
+  {# Structured data for SEO: MedicalOrganization #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.baseUrl }}",
+    "email": "{{ site.email }}",
+    "telephone": "{{ site.phone }}"
+  }
+  </script>
 </footer>
